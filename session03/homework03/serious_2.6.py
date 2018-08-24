@@ -10,12 +10,15 @@ for i in range(n):
         flock_sheep[y] += growth
     print ("One month has passed, now here is my flock ", flock_sheep)
 
-    biggest = max(flock_sheep)
-    print ("Now my biggest sheep has size ", biggest, "let's sheer it")
+    if i <(n-1):
+        biggest = max(flock_sheep)
+        print ("Now my biggest sheep has size ", biggest, "let's sheer it")
 
-    sheep_no = flock_sheep.index(biggest)
-    flock_sheep[sheep_no] = 8
-    print ("After sheering, here is my flock ", flock_sheep)
+        sheep_no = flock_sheep.index(biggest)
+        flock_sheep[sheep_no] = 8
+        print ("After sheering, here is my flock ", flock_sheep)
+    else:
+        print()
 price = 2
 total_size = 0
 for i in range(len(flock_sheep)):

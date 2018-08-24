@@ -3,18 +3,20 @@ t= Turtle()
 colors = ['red', 'blue', 'brown', 'yellow', 'grey']
 color_size = len(colors)
 
-for i in range(1, color_size):
+for i in range(color_size):
     t.color(colors[i])
     t.begin_fill()      
     x = 50
-    for y in range(i):
-        for z in range (1,4):
-            if z % 2 == 0:
-                forward(x*i)
-            else:
-                forward(100)
-        right(90)          
+    for k in range(4):
+        if k%2 == 0:
+            t.forward(x)
+        else:
+            t.forward(100)
+        t.right(90)
+
     t.end_fill()
-    x += 50
+    penup()
+    t.forward(50)
+    pendown()
     
 mainloop ()
